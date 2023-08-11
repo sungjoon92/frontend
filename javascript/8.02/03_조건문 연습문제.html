@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_조건문 연습문제</title>
+</head>
+
+<body>
+
+    <h3>조건문 연습문제</h3>
+</body>
+
+<script>
+    // 문1) 평균 점수에 따라서 A, B, C, D, F학점을 구하시오(switch문 활용)
+
+    let kor = 100, eng = 100, mat = 90;
+    let aver = parseInt((kor + eng + mat) / 3);
+
+    document.write("<hr>")
+    switch (parseInt(aver / 10)) {
+        case 10: document.write("<span>", "만점", "</span>"); break;
+        case 9: document.write("<span>", "A학점", "</span>"); break;
+        case 8: document.write("<span>", "B학점", "</span>"); break;
+        case 7: document.write("<span>", "C학점", "</span>"); break;
+        case 6: document.write("<span>", "D학점", "</span>"); break;
+        default: document.write("<span>", "F학점", "</span>")
+    }
+
+    document.write("<hr>")
+
+    // 문2) 연산기호(op)에 따라 결과값을 출력하시오
+    let i = 3, j = 5;
+    let op = "+"  //+ - * /
+
+    // 3+5=8
+    // 3-5=-2
+    // 3*5=15
+    // 3/5=0.6
+
+    let result = 0;
+    switch (op) {
+        case "+": result = i + j; break;
+        case "-": result = i - j; break;
+        case "*": result = i * j; break;
+        case "/": result = i / j; break;
+    }
+    document.write(i + op + j + "=" + result)
+
+
+
+
+
+    // 문3) 주민번호를 이용해서 나이와 성별을 출력하시오
+    // 예 191230-1234567
+    //  나이 : 올해년도 - 태어난년도
+    // 성별 : 1 or 3 남자, 2 or 4 여자
+
+    // "19" -> 19
+    // parseInt("19")
+    // Number("19")
+
+    document.write("<hr>")
+
+    let myyear = parseInt("4"); //태어난 년도
+    let mycode = parseInt("4"); //성별코드
+
+    switch (mycode) {
+        case 1:
+        case 2: myyear = myyear + 1900; break;
+        // myyear = mycode = 4 + 1900 = 1904
+        case 3:
+        case 4: myyear = myyear + 2000; break;
+        // myyear = mycode = 4 + 2000 = 2004
+    }//switch end
+
+    // 나이 구하기
+    let myage = 2023 - myyear;
+    // myage= 2023-1904 or 2004 = -
+    document.write("나이 : " + myage + "<hr>")
+
+    // 성별 구하기
+    switch (mycode % 2) {
+        case 0: document.write("성별 : 여자<hr>"); break;
+        case 1: document.write("성별 : 남자<hr>"); break;
+    }
+
+    if (mycode == 1 || mycode == 3) {
+        document.write("성별 : 남자<hr>")
+    } else if (mycode == 2 || mycode == 4) {
+        document.write("성별 : 여자<hr>")
+    }
+
+
+
+
+
+
+
+
+</script>
+
+</html>

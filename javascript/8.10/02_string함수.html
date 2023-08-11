@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_string함수</title>
+</head>
+
+<body>
+    <h3>string methods</h3>
+</body>
+<script>
+    // https://www.w3schools.com/js/js_string_methods.asp
+
+    let str = "Gone with the wind"
+    document.write(str)
+    document.write("<hr>")
+
+    document.write(str.length) //18 글자갯수
+    document.write("<hr>")
+
+    document.write(str.charAt(0)) //"g" 0번쨰 글자
+    document.write("<hr>")
+
+    document.write(str.charAt(17)) //"d" 마지막
+    document.write("<hr>")
+
+    document.write(str.charAt(str.length - 1));//"d" 마지막 글자
+    document.write("<hr>")
+
+    document.write(str.toLowerCase());//전부 소문자 치환
+    document.write("<hr>")
+
+    document.write(str.toUpperCase());//전부 대문자 치환
+    document.write("<hr>")
+
+    //첫번째 "n"-> "N"으로 치환
+    document.write(str.replace("n", "N"));
+    document.write("<hr>")
+
+    // 글자 자르기 ★★★★★★★★★★★★★★★★★★★★
+    //6번째~(120-1)번째 까지 "ith th"
+    document.write(str.substring(6, 12));
+    document.write("<hr>")
+
+    //"Te"
+    document.write(str.substring(10, 13));
+    document.write("<hr>")
+
+    // 맨 앞글자 "g"
+    document.write(str.substring(0, 1));
+    document.write("<hr>")
+
+    // 맨 마지막 글자 자르기 "d"
+    document.write(str.substring(str.length - 1, str.length));
+    document.write("<hr>")
+
+    // 문자열 분리하기
+    document.write(str.slice(10, 13));//the
+    document.write("<hr>")
+
+    // 문자열 합치기
+    let text1 = "hello";
+    let text2 = "world";
+
+    document.write(text1 + text2)
+    document.write("<hr>")
+
+    let text3 = text1.concat(text2);
+    document.write(text3)//
+    document.write("<hr>")
+
+
+    // 문자열 맨앞, 맨뒤 공백제거하기
+
+    let text4 = "   java  script  ";
+    document.write("#" + text4.trim() + "#");
+    document.write('<hr>');
+
+    //4칸을 기준으로 빈칸은 *으로 앞에서 부터 채우기
+    let text5 = "9";
+    document.write(text5.padStart(4, "*"));//***9
+    document.write('<hr>');
+
+    // 4칸을 기준으로 빈칸은 *으로 뒤에서 부터 채우기
+    let text6 = "8";
+    document.write(text5.padEnd(4, "*"));//8***
+    document.write('<hr>');
+    //////////////////////////////////////////////////////////////
+
+    //문) 주민번호를 이용해서 나이, 성별을 구하시오
+    let jumin = "1908104123456";
+    let myyear = parseInt(jumin.substring(0, 2));
+    console.log(myyear);
+    let mycode = parseInt(jumin.substring(6, 7));
+    console.log(mycode);
+
+    const d = new Date();
+    let cYear = d.getFullYear();
+
+    switch (mycode) {
+        case 1:
+        case 2: myyear = myyear + 1900; break;
+        case 3:
+        case 4: myyear = myyear + 2000; break;
+    }
+    let myage = cYear - myyear;
+    document.write("나이" + myage + "세<br>")
+
+    switch (mycode % 2) {
+        case 0: document.write("여자"); break;
+        case 1: document.write("남자"); break;
+    }
+
+
+</script>
+
+</html>

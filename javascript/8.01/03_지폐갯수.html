@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_지폐갯수</title>
+    <script src="8.01/code.jquery.com_jquery-3.7.0.min.js" defer></script>
+</head>
+
+<style>
+    #demo {}
+
+    #bt {
+        width: 200px;
+        height: 35px;
+    }
+</style>
+
+<body>
+    <div id="demo" style="text-align: center;"></div>
+    <button id=bt onclick="togglebt()">버튼</button>
+</body>
+
+<script>
+
+
+    // function togglebt() {
+
+
+
+    //     // 토글 할 버튼 선택 (btn1)
+
+    //     let bt = document.getElementById('bt');
+    //     let demo = document.getElementById('demo');
+
+
+
+    //     // btn1 숨기기 (display: none)
+
+    //     if (bt.style.display !== 'block') {
+
+    //         demo.style.display = 'block';
+
+    //     }
+
+    //     // btn` 보이기 (display: block)
+
+    //     else {
+
+    //         demo.style.display = 'none';
+
+    //     }
+
+
+
+    // }
+
+    //연습) 각 지폐갯수를 구해서 표작성해서 본문 id+demo에 출력하시오    
+
+    let money = 54320;
+    let man = (parseInt(money / 10000))
+    let chen = (parseInt(money % 10000 / 1000))
+    let bak = (parseInt(money % 1000 / 100))
+    let sib = (parseInt(money % 100 / 10))
+
+
+    let result = ""; //결과값
+
+    result = result + "<table border='1' width=300px; height=200px;>";
+    result = result + "<tr>";
+    result = result + "<th>만원<th>";
+    result = result + "<td>" + man + "장" + "</td>";
+    result = result + "</tr>";
+
+    result = result + "<tr>";
+    result = result + "<th>천원<th>";
+    result = result + "<td>" + chen + "장" + "</td>";
+    result = result + "</tr>";
+
+    result = result + "<tr>";
+    result = result + "<th>백원<th>";
+    result = result + "<td>" + bak + "장" + "</td>";
+    result = result + "</tr>";
+
+    result = result + "<tr>";
+    result = result + "<th>십원<th>";
+    result = result + "<td>" + sib + "장" + "</td>";
+    result = result + "</tr>";
+
+
+    document.getElementById("demo").innerHTML = result;
+
+
+
+
+</script>
+
+
+
+</html>

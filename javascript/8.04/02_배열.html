@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_배열</title>
+</head>
+
+<body>
+    <!-- https://www.w3schools.com/js/js_arrays.asp -->
+</body>
+
+<script>
+
+    let kor = []; //배열선언
+    kor[0] = 10; //배열 요소의 인덱스는 0부터 시작한다
+    kor[1] = 20; //베열 요소의 인덱스는 1씩 증가한다
+    kor[2] = 30;
+
+    document.write(kor[0]);
+    document.write(kor[1]);
+    document.write(kor[2]);
+    document.write("<hr>"); 
+
+
+    let names = [];
+    names[0] = "무궁화";
+    names[1] = "개나리";
+    names[2] = "진달래";
+
+    document.write(names[0]);
+    document.write(names[1]);
+    document.write(names[2]);
+    document.write("<hr>");
+
+
+    // 배열선언
+    // let points=[] //good
+    // let points=new Array() //bad
+
+
+    // 배열선언 및 초기값 
+    let points = [40, 100, 25, 3, 7];
+
+    document.write(points[0]);
+    document.write(points[1]);
+    document.write(points[2]);
+    document.write(points[3]);
+    document.write(points[4]);
+    document.write("<hr>");
+
+    document.write(points);
+    document.write("<hr>");
+    document.write("<hr>");
+
+    for (let i = 0; i < points.length; i++) {
+        document.write(points[i])
+        document.write("<hr>");
+    }//for end
+
+    // document.write(points[5]); //undefined 5번쨰 요소는 존재하지 않음
+
+    for (i in points) {  //in -> object(덩어리)
+
+        document.write(points[i])
+        document.write("<br>")
+    }//for end
+
+
+    let fruits = ["banana", "orange", "apple", " mango"]
+
+    fruits[6] = "lemon";
+    document.write(fruits.length)
+
+    document.write(fruits[6])
+    document.write(fruits[0])
+    document.write(fruits[4])
+    document.write(fruits[5])
+    document.write(fruits[8])
+
+    fruits[8] = "kiwi";
+    document.write(fruits.length)
+
+    console.log(fruits);//배열 요소의 갯수 9
+</script>
+
+</html>

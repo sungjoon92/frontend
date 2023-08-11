@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_성적표</title>
+</head>
+
+<body>
+
+    <h3>성적 프로그램</h3>
+
+    <div id="demo"></div>
+
+</body>
+
+<script>
+
+    /*
+        /section0802/07_성적표
+
+
+        //문) 5명의 학생을 대상으로 평균, 등수, 과락, 평균10점당 * 한개씩, 장학생을 구한후
+    //    결과값을 표작성해서 id=demo에 출력하시오
+    /*
+     
+
+/*
+                       출력결과
+                    --------------------------------------------------------
+                    이름   국어 영어 수학 평균  등수  결과
+                    --------------------------------------------------------
+                    라일락  100  100  100  100  1  합  격 ********** 장학생
+                    진달래   50   55   60   55  4  불합격 *****
+                    개나리   95   95   35   75  3  재시험 *******
+                    무궁화   80   85   90   85  2  합  격 ********
+                    홍길동   60   40   30   43  5  불합격 ****
+                    --------------------------------------------------------
+
+*/
+
+
+
+    let uname = ["라일락", "진달래", "개나리", "무궁화", "홍길동"];
+    let size = uname.length; //5
+
+    let kor = [100, 50, 95, 80, 60];
+    let kor_size = kor.length;
+
+    let eng = [100, 55, 95, 85, 40];
+    let eng_size = eng.length;
+
+    let mat = [100, 60, 35, 90, 30];
+    let mat_size = mat.length;
+
+
+    // // 국어 총점  
+    // let kor_hap = 0;
+
+    // for (i = 0; i < kor_size; i++) {
+    //     kor_hap = kor_hap + kor[i];
+    // }//for end
+    // document.write(kor_hap);
+    // document.write("<hr>");
+
+
+    // // 영어 총점  
+    // let eng_hap = 0;
+
+    // for (i = 0; i < eng_size; i++) {
+    //     eng_hap = eng_hap + eng[i];
+    // }//for end
+    // document.write(eng_hap);
+    // document.write("<hr>");
+
+
+    // // 수학 총점  
+    // let mat_hap = 0;
+
+    // for (i = 0; i < kor_size; i++) {
+    //     mat_hap = mat_hap + mat[i];
+    // }//for end
+    // document.write(mat_hap);
+    // document.write("<hr>");
+
+    // let total = kor_hap + eng_hap + mat_hap;
+
+    // document.write(total);
+    // document.write("<hr>");
+
+
+    // let aver= parseInt(total/3)
+    // document.write(aver);
+    // document.write("<hr>");
+
+    /////////////////////////총점/////////////
+
+    // 라일락 총점
+    let la_total = kor[0] + eng[0] + mat[0];
+    document.write("라일락 총점" + la_total + "<br>");
+
+    // 진달래 총점
+    let jin_total = kor[1] + eng[1] + mat[1];
+    document.write("진달래 총점" + jin_total + "<br>");
+
+    // 개나리 총점
+    let gea_total = kor[2] + eng[2] + mat[2];
+    document.write("개나리 총점" + gea_total + "<br>");
+
+    // 무궁화 총점
+    let moo_total = kor[3] + eng[3] + mat[3];
+    document.write("무궁화 총점" + moo_total + "<br>");
+
+    // 홍길동 총점
+    let hong_total = kor[4] + eng[4] + mat[4];
+    document.write("홍길동 총점" + hong_total + "<br>");
+
+
+    document.write("<hr>")
+    //////////////////평균/////////////////////////
+
+    let la_aver = (la_total / 3);
+    document.write("라일락 평균" + la_aver + "<br>");
+    let jin_aver = (jin_total / 3);
+    document.write("진달래 평균" + jin_aver + "<br>");
+    let gea_aver = (gea_total / 3);
+    document.write("개나리 평균" + gea_aver + "<br>");
+    let moo_aver = (moo_total / 3);
+    document.write("무궁화 평균" + moo_aver + "<br>");
+    let hong_aver = (hong_total / 3);
+    document.write("홍길동 평균" + parseInt(hong_aver) + "<br>");
+
+    document.write("<hr>")
+
+    ////////////////////////등수//////////////////////////////////
+
+
+    let allaver = [la_aver, jin_aver, gea_aver, moo_aver, hong_aver];
+    let rank = [1, 1, 1, 1, 1];
+    let rank_size = rank.length;
+
+    for (let a = 0; a < rank_size; a++) {
+        for (let b = 0; b < rank_size; b++) {
+            if (allaver[a] < allaver[b]) {
+                rank[a] = rank[a] + 1;
+            }// if end
+        }
+    }//for end
+    document.write("등수:" + rank[0] + rank[1] + rank[2] + rank[3] + rank[4]);
+    document.write("<hr>");
+
+    ///////////////////결과/////////////////////////
+
+    // 합격,재시험,과락
+    let pass = "";
+    for (let i = 0; i = kor_size; i++) {
+        if (aver >= 70) {
+            if (kor < 40 || eng < 40 || mat < 40) {
+                pass = "재시험"
+            } else {
+                pass = "합격"
+            }
+        } else {
+            pass = "틸락"
+        }// if end
+    }
+
+
+</script>
+
+</html>

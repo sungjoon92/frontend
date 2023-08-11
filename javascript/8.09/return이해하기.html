@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    function testBreak1(num) {
+        let i = 0;
+        while (i < 6) {
+            if (i === 3) {
+                break;  //break 사용
+            }
+            i++;
+            console.log(i);
+
+        }
+        return i * num;
+
+    }
+
+    testBreak1(2);  //6
+    document.write(testBreak1(2))
+    console.log(testBreak1(2));
+
+
+
+
+    function testBreak2(num) {
+        let i = 0;
+        while (i < 6) {
+            i = i + 1;
+        }
+        return i * num;
+
+
+
+    }
+
+
+    testBreak2(2);  //undefined
+    document.write("<br>" + testBreak2(2))
+    let sum = 0;
+    for (let a = 1; a <= 100; a++) {
+        sum += a;
+    }
+    document.write(sum);
+
+</script>
+
+</html>

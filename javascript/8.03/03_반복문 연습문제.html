@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_반복문 연습문제</title>
+</head>
+
+<body>
+    <h3>03_반복문 연습문제</h3>
+</body>
+
+<script>
+
+
+    //문1) 아래와 같이 출력하시오
+    /*
+        12345
+        23456
+        34567
+        45678
+        56789
+    */
+
+    for (a = 0; a < 5; a++) {
+        for (b = a + 1; b <= a + 5; b++) {
+
+            document.write(b)
+        }//for end
+
+        document.write("<br>")
+    }//for end
+    /*
+    a= 0 0<5
+                b=0+1 1<=0+5
+    a= 1 0<5
+                b=1+1 2<=1+5
+    a= 2 0<5
+                b=2+1 3<=2+5
+    a= 3 0<5
+                b=3+1 4<=3+5
+    a= 4 0<5
+                b=4+1 5<=4+5
+    */
+    document.write("<hr>")
+
+
+    for (i = 1; i <= 5; i++) {
+        for (j = i; j <= 4 + i; j++) {
+            document.write(j);
+        }
+        document.write("<br>");
+    }
+
+    //////////////////////////////////////////
+    //문2)아래 그림과 같이 출력하시오
+    /*
+        @★★★
+        ★@★★
+        ★★@★
+        ★★★@
+
+    //    줄이랑 행수가 같은칸에 @
+
+    */
+    for (let a = 1; a <= 4; a++) {
+        for (let b = 1; b <= 4; b++) {
+            if (a == b) {
+                document.write("@")
+            } else {
+                document.write("★")
+            }
+
+        }//for end
+        document.write("<br>")
+    }//for end
+
+
+    /*
+        a=1  1<=4 
+                    b=1 1<=4 {if(1==1)@}
+                    b=2 1<=4 {if(1==2)else ★}
+                    b=3 1<=4 {if(1==3)else ★}
+                    b=4 1<=4 {if(1==4)else ★}
+        document.write("<br>")
+
+        a=2  2<=4 
+                    b=1 2<=4 {if(2==1)else ★}
+                    b=2 2<=4 {if(2==2 @)
+                    b=3 2<=4 {if(2==3)else ★}
+                    b=4 2<=4 {if(2==4)else ★}
+        document.write("<br>")
+    
+        a=2  3<=4 
+                    b=1 3<=4 {if(3==1)else ★}
+                    b=3 3<=4 {if(3==2)else ★}
+                    b=2 3<=4 {if(3==3 @)
+                    b=4 3<=4 {if(3==4)else ★}
+        document.write("<br>")
+    
+        a=2  4<=4 
+                    b=1 4<=4 {if(4==1)else ★}
+                    b=3 4<=4 {if(4==2)else ★}
+                    b=4 4<=4 {if(4==3)else ★}
+                    b=2 4<=4 {if(4==4 @)
+        document.write("<br>")
+    
+    
+    */
+    document.write("<hr>")
+    //////////////////////////
+
+    //문3) 아래와 같이 누적의 합을 출력하시오 (회전수 증가)
+    /*
+        1+ ... +10=55
+        1+ ... +20=210
+        1+ ... +30=465
+        
+        1+ ... +90=4095
+        1+ ... +100=5050            
+    */
+
+    // let start = 0;
+    // let end = 0;
+
+
+    // // 변수값 서로 교환하기(swap)
+    // if (start > end) {
+    //     let tmp = start;
+    //     start = end;
+    //     end = tmp;
+    // }//if end
+
+    let sum = 0; //결과값
+
+    for (let a = 10; a <= 100; a += 10) {
+        for (let b = 1; b <= a; b++) {
+            sum += b;
+            console.log(sum, b);
+        }//for end
+        document.write("1+ .... +" + a + "=" + sum);
+        document.write("<br>");
+        sum = 0;
+
+    }//for end
+
+    /*
+        a=10 10<=100 a=a+10
+                    b=1 1<=10 sum=0+1
+                    b=1 2<=10 sum=1+2
+                    b=1 3<=10 sum=3+3
+                    ...
+                    b=1 10<=10 sum=45+10
+                    
+        a=20 10<=100 a=a+10
+                    b=1 1<=20 sum=55+1
+                    b=1 2<=20 sum=55+S2
+
+    */
+    document.write("<hr>")
+    ////////////////////////////////
+    let sum2 = 0;
+    let ssum = 0;
+    for (i = 1; i <= 10; i++) {
+        for (j = 1; j <= 10 * i; j++) {
+            sum2 = sum2 + j;
+            ssum = sum2;
+        }
+        document.write("1+...+" + 10 * i + "=" + ssum + "<br>");
+        sum2 = 0;
+    }
+
+
+
+</script>
+
+</html>

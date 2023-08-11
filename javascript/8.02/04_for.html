@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>for 반복문</h3>
+</body>
+
+<script>
+
+
+    // for 반복문 형식
+    // for( ; ; ) {}
+    // for( in ) {}
+    // 무한 loop
+
+    // 증가에 따른 반복
+
+    for (let a = 1; a <= 3; a = a += 1) {
+        document.write("HTML" + a + "<hr>")
+    }//for end
+
+    // a= 1 1<=3 HTML a=1+1
+    //      2<=3 HTML a=2+1
+    //      3<=4 HTML a=3+1
+    //      4<=3 X
+
+
+    // 감소에 따른 반복
+
+    for (let b = 3; b >= 1; b = b -= 1) {
+        document.write("css" + b + "<hr>")
+    }//for end
+
+    // b=3  3>=1 css a=3+1
+    //      2>=1 css a=2+1
+    //      1>=1 css b=1=1
+    //      0>=1 X 
+
+
+
+
+    // 연습) 4단 출력하기
+
+    /*
+    4*1=4
+    4*2=8
+    ...
+    4*9=36
+    */
+
+    let dan = 4;
+    for (let i = 1; i <= 9; i = i + 1) {
+        document.write(dan + "*" + i + "=" + (dan * i));
+        document.write("<hr>");
+    }
+
+
+// 전위 후위 연산자
+    // n = 1;
+    // m = 2;
+
+    // document.write(n++ + --m); //1 + 1;
+    // document.write(n-- + ++m); //2 + 2;
+    // document.write(n); //2 + 2;
+
+</script>
+
+</html>

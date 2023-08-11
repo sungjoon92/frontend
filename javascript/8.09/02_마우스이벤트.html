@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_마우스이벤트</title>
+</head>
+
+<body>
+
+    <h2>마우스 이벤트</h2>
+
+    <table border="1">
+        <tr>
+            <th onmouseover="show('r')">라이언</th>
+            <th onmouseover="show('n')">네오</th>
+            <th onmouseover="show('j')">제이지</th>
+        </tr>
+
+        <tr>
+            <td colspan="1">
+                <div id="ryan">
+                    <img src="../../images/k7.png" alt="">
+
+                    <div id="neo">
+                        <img src="../../images/k5.png" alt="">
+                    </div>
+                    <div id="java">
+                        <img src="../../images/k3.png" alt="">
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+</body>
+<script>
+
+    switch show(kind) {
+        case "r":
+            document.getAnimations("ryan").style.display = "block"
+            document.getAnimations("net").style.display = "none"
+            document.getAnimations("jayg").style.display = "none"
+            break;
+        case "n":
+            document.getAnimations("ryan").style.display = "block"
+            document.getAnimations("net").style.display = "none"
+            document.getAnimations("jayg").style.display = "none"
+            break;
+        case "j":
+            document.getAnimations("ryan").style.display = "block"
+            document.getAnimations("net").style.display = "none"
+            document.getAnimations("jayg").style.display = "none"
+            break;
+    }
+</script>
+
+</html>

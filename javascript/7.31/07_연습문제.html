@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_연습문제</title>
+</head>
+
+<body>
+    <h3>연산자 연습문제</h3>
+</body>
+
+<script>
+
+    //문1) 임의의 정수가 짝수(2의 배수)인지 확인하시오
+    // 짝수란? 2로 나누어서 나머지가 0인수
+    let a = 4;
+    document.write(a % 2 == 0);
+    //4%2
+    // 0 ==0
+    // true
+    document.write(a % 2 != 1);
+    // 4%2
+    // 0 !=1
+    // true
+    document.write("<hr>");
+
+    //문2) 임의의 정수가 3의 배수인지 확인하시오
+    let b = 6;
+    document.write(b % 3 == 0)
+    document.write("<hr>");
+
+    //문3) 임의의 정수가 4의 배수인지 확인하시오
+    let c = 8;
+    document.write(c % 4 == 0)
+    document.write("<hr>");
+    //문4) 해당 년도가 윤년인지 확인하시오
+    let d = 2023;
+    document.write(d % 4 == 0)
+    document.write("<hr>");
+
+
+    //문5) 임의의 정수가 2의 배수이면서 5의 배수인지 확인하시오
+    let e = 10;
+    document.write(e % 2 == 0 && e % 5 == 0)
+    document.write("<hr>");
+
+
+    //문6) 임의의 정수가 1 또는 3인지 확인하시오
+    let f = 1;
+    document.write(f == 1 || f == 3);
+    document.write("<hr>");
+
+    //문7) 국어점수가 80 ~ 89 사이인지 확인하시오
+
+    let g = 85;
+    document.write(80 <= g && g <= 89)
+    document.write("<hr>");
+
+    //문8) 해당 년도가 윤년인지 확인하시오
+    function leapYear(year) {
+        return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+    };
+
+    console.log(leapYear(2019));
+    console.log(leapYear(2020));
+    console.log(leapYear(2021));
+    console.log(leapYear(2022));
+    console.log(leapYear(2023));
+    console.log(leapYear(2024));
+    console.log(leapYear(2025));
+    console.log(leapYear(2026));
+    console.log(leapYear(2027));
+    console.log(leapYear(2028));
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_Date</title>
+</head>
+
+<body>
+
+    <h3>Date객체</h3>
+    현재날짜 <div id="clock"></div>
+
+</body>
+
+<script>
+
+    // https://www.w3schools.com/js/js_dates.asp
+    // Date 날짜 관련 내장 객체
+
+    const d = new Date();
+    document.write(d.getFullYear())
+    document.write("<br>")
+
+    document.write(d.getMonth() + 1) //8월이면 7반환됨
+    document.write("<br>")
+
+    document.write(d.getDate())
+    document.write("<br>")
+
+    document.write(d.getHours())
+    document.write("<br>")
+    document.write(d.getMinutes())
+    document.write("<br>")
+    document.write(d.getSeconds())
+    document.write("<br>")
+    document.write(d.getMilliseconds())
+    document.write("<br>")
+
+    document.write(d.getgetDay())//요일
+    document.write("<br>")
+
+
+    const days=["일","월","화","수","목","금","토"]
+    document.write(days[d.getDay()])
+
+</script>
+
+</html>

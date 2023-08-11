@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document.html</title>
+    <script src="code.jquery.com_jquery-3.7.0.min.js "></script>
+</head>
+
+<body>
+    <h3>document 객체</h3>
+
+    <div id="demo"></div>
+
+</body>
+
+<script>
+
+
+        /*
+            객체 object
+                속성(멤버변수)  객체명.속성
+                메소드(멤버함수)   객체명.메소드()
+        */
+
+        document.write(123);
+        document.write("대한민국");
+        document.write("<hr>");
+
+        // + 연산자
+        document.write(3 + 5); //8
+        document.write("<hr>");
+
+        document.write(3 + "5"); //35
+        document.write("<hr>");
+
+        document.write("3" + 5); //35
+        document.write("<hr>");
+
+        document.write("3" + "5"); //35
+        document.write("<hr>");
+
+        document.write("korea" + "seoul");
+        document.write("<hr>");
+
+        document.write("서울특별시" + "강남구" + "역삼동");
+        document.write("<hr>");
+
+        document.write("3+5");  //3+5
+        document.write("<hr>");
+
+        ////////////////////////////////////
+
+
+        name = "손흥민";
+        age = 25;
+        height = 178.5;
+        document.write("이름:" + name + "<hr>");
+        document.write("나이:" + age + "<hr>");
+        document.write("키:" + height + "<hr>");
+        //////////////////////////
+
+        document.write("개나리<br><p>진달래<p>")
+        document.write("<img src='../../images/monkey.png'>")
+        document.write("<hr>")
+        /////////////////////////////
+
+        let str = ""; //빈 문자열(글자갯수0개)
+        document.write("#" + str + "#");
+        document.write('<hr>');
+
+        str = str + "one";  //one
+        document.write(str); //one
+        document.write('<hr>');
+
+        str = str + "two"; //onetwo
+        document.write(str); //onetwo
+        document.write('<hr>');
+
+        str = str + "three"; //onetwothree
+        document.write(str); //onetwothree
+        document.write('<hr>');
+
+        //문자열 지우기
+        str = ""; //""
+        document.write("#" + str + "#"); //""
+        document.write('<hr>');
+
+
+        //////////////////////////////
+
+
+        //본문 <body>에 있는 id속성 접근
+
+        // 1) 순수 javascript 접근
+        // document.getElementById("demo")
+        // document.getElementById("demo").innerText="아이티윌";
+
+
+        // 2) jQuery 접근 (jQuery라이브러리 필요함)
+        // $("#demo").val("아이티윌")
+
+
+        // 연습) 이름 나이 키 값들을 표작성을 해서  id+demo에 출력하시오
+        name = "김연아";
+        age = 30;
+        height = 165.7;
+
+
+        let result = ""; //결과값
+        result = result + "<table border='1'>";
+        result = result + "<tr>";
+        result = result + "<th>이름<th>";
+        result = result + "<td>" + name + "</td>";
+        result = result + "</tr>";
+        result = result + "<tr>";
+        result = result + "<th>나이<th>";
+        result = result + "<td>" + age + "</td>";
+        result = result + "</tr>";
+        result = result + "<tr>";
+        result = result + "<th>키<th>";
+        result = result + "<td>" + height + "</td>";
+        result = result + "</tr>";
+        result = result + "</table>";
+
+        //결과값을 문자열 출력
+        // document.getElementById("demo").innerText=result;
+
+        // 결과값을 html방식으로 출력
+        document.getElementById("demo").innerHTML = result;
+
+
+        // let temphtml = `
+        //             <table border='1'>
+        //                 <tr>
+        //                     <th>이름<th>
+        //                     td>${name}<td>
+        //                 <tr>
+        //                 <tr>
+        //                     <th>나이<th>
+        //                     td>${age}<td>
+        //                 <tr>
+        //                 <tr>
+        //                     <th>키<th>
+        //                     td>${height}<td>
+        //                 <tr>
+        //             <table>`;
+
+        // $("#demo").append(temphtml);
+</script>
+
+</html>

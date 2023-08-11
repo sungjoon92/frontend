@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_이벤트</title>
+</head>
+
+<body>
+    <!-- <body onload="alert('어서와')"> -->
+
+    <h3>이벤트</h3>
+    <h2>JavaScript HTML Events</h2>
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+
+
+    <form name="myform" id="myform" method="get" action="ok.jsp">
+        <input type="button" value="버튼1" onclick="alert('버튼1클릭')">
+        <hr>
+
+        <input type="button" value="아이티윌" onclick="location.href='//www.itwill.co.kr/'">
+        <hr>
+
+        <input type="button" value="마우스over,out" onmouseover="alert('마우스over')" onmouseout="alert('마우스out')">
+        <hr>
+
+        <input type="text" onkeydown="alert('키보드누름')">
+        <hr>
+
+        <textarea name="" id="" cols="30" rows="10" onkeydown="alert('키보드누름')"></textarea>
+        <hr>
+
+        <select name="" id="" onchange="alert('목록')">
+            <option value="" selected>서울</option>
+            <option value="">제주</option>
+            <option value="">부산</option>
+        </select>
+        <hr>
+
+        <!-- 텍스트 입력상자에 커서가 들어왔을때 onfocus 이벤트 -->
+        <input type="text" name="" id="" onfocus="alert('커서들어옴')">
+        <hr>
+        <!-- 서버로 해당폼이 전송될 때 이벤트 onsubmit -->
+        <!-- 폼을 서버로 전송하는 컨트롤 요소들 -->
+        <input type="submit" name="" id="" value="전송1">
+        <button type="image" src="../../images/search.png">전송2</button>
+    </form>
+</body>
+
+<script>
+    //참조 https://www.w3schools.com/js/js_events.asp
+    /*
+        자바스크립트는 주로 이벤트를 발생시킨 후 함수를 호출함으로써 실행한다
+        기본 이벤트의 종류
+        onchange	다른 객체로 바뀌었을때
+        onclick	    마우스를 클릭했을때
+        onmouseover	마우스가 올려졌을때
+        onmouseout  마우스가 나갔을때	
+        onkeydown	키보드를 눌렀을때
+        onload	    문서를 불러오는 작업이 끝났을 때
+    */
+</script>
+
+</html>
