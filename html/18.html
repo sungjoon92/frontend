@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18동행복권.html</title>
+</head>
+
+
+
+
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+
+    #wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    nav {
+        width: 100%;
+        height: 10%;
+        border-bottom: 3px solid #007bc3;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    nav ul li {
+        list-style: none;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 20px;
+        padding: 2% 4% 2% 4%;
+    }
+
+    nav ul li:hover {
+        background: #007bc3;
+    }
+
+    .login {
+        width: 400px;
+        margin-top: 30px;
+        float: right;
+    }
+
+    .login input {
+        font-size: 17px;
+        margin-bottom: 5%;
+        border: 0px solid #000;
+        color: #fff;
+        cursor: pointer;
+
+    }
+
+    .login input:nth-child(1) {
+        background: gray;
+    }
+
+    .login input:nth-child(2) {
+        background: rgb(111, 197, 231);
+    }
+
+    .login input:nth-child(4) {
+        background: rgb(115, 230, 115);
+    }
+
+    .login input:nth-child(5) {
+        background: rgb(115, 230, 115);
+
+    }
+
+    .login span {
+        margin: 0 3% 0 2%;
+        border-left: 1px solid #000;
+    }
+
+
+    #main {
+        padding-top: 60px;
+        width: 100%;
+    }
+
+    aside {
+        width: 300px;
+        height: auto;
+        float: left;
+        margin-left: 2%;
+    }
+
+    aside h2 {
+        margin-bottom: 10%;
+        font-size: 30px;
+    }
+
+    aside ul {}
+
+    aside ul li {
+        padding: 3%;
+        border: 1px solid #b8b5b5;
+
+    }
+
+    aside ul li a {
+        font-size: 15px;
+        color: black;
+
+    }
+</style>
+
+
+
+
+
+
+<body>
+    <!-- 연습) 동행복권 웹페이지 레이아웃 -->
+    <!-- 참조 https://dhlottery.co.kr/store.do?method=sellerInfo645 -->
+
+
+    <!-- wrap -->
+    <div id="wrap">
+
+        <!-- header -->
+        <div id="header">
+            <h1 class="logo"><a href="#"><img src="동행복권.png" alt="로고"></a></h1>
+
+            <div class="login">
+                <input type="button" value="로그인">
+                <input type="button" value="회원가입">
+                <span></span>
+                <input type="button" value="마이페이지">
+                <input type="button" value="고객센터">
+            </div>
+
+            <nav>
+                <ul>
+                    <li>복권구매</li>
+                    <li>복권정보</li>
+                    <li>당첨결과</li>
+                    <li>판매점</li>
+                    <li>이벤트</li>
+                    <li>행복공감</li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- main -->
+        <div id="main">
+            <aside>
+                <h2>당첨결과</h2>
+                <ul>
+                    <li><a href="#">로또6/45</a>
+                        <ul>
+                            <li><a href="#">회차별 당첨번호</a></li>
+                            <li><a href="#">내번호 당첨확인</a></li>
+                            <li><a href="#">당첨내역</a></li>
+                            <li><a href="#">당첨금 지급안내</a></li>
+                            <li><a href="#">추첨방송 다시보기</a></li>
+                            <li><a href="#">추천방송 참관신청</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">연금복권720+</a>
+                        <ul>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">전자복권</a></li>
+                    <li><a href="#">즉석식인쇄복권</a></li>
+                    <li><a href="#">로또6/45 당첨통계</a></li>
+                    <li><a href="#">연금복권720+ 당첨통계</a></li>
+                    <li><a href="#">당청소식</a></li>
+                    <li><a href="#">미수령 당첨금</a></li>
+                </ul>
+            </aside>
+
+            <section>
+                <div class="section1"></div>
+                <div class="section2"></div>
+                <div class="section3"></div>
+            </section>
+        </div>
+
+        <!-- footer -->
+        <div id="footer"></div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_표작성.html</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <!-- table -->
+
+
+    <table border="1px">
+        <!-- 줄시작 -->
+        <tr>
+            <td>셀1</td>
+            <td>셀2</td>
+            <td>셀3</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table border="1px" width="500" height="300">
+        <tr>
+            <th>이름</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td>무궁화</td>
+            <td>강남구 테헤란로</td>
+        </tr>
+    </table>
+
+    <table border="1px" width="50%">
+        <tr>
+            <th>이름</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td>무궁화</td>
+            <td>강남구 테헤란로</td>
+        </tr>
+    </table>
+
+    <hr>
+
+
+    <!-- 정렬 : 가로(align) , 세로(valign)-->
+    <table border="1" width="250" height="300">
+        <tr>
+            <td align="left">종로구</td>
+            <td align="center">마포구</td>
+            <td align="right">강남구</td>
+        </tr>
+        <tr>
+            <td valign="top">중구</td>
+            <td valign="middle">서초구</td>
+            <td valign="bottom">송파구</td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">노원구</td>
+            <td align="center" valign="middle">강북구</td>
+            <td align="right" valign="bottom">도봉구</td>
+        </tr>
+    </table>
+
+    <!-- 표안에서 영역 구분 <thead> <tbody> <tfoot>-->
+    <table border="1">
+        <!-- 테이블 머리말 -->
+        <thead>
+            <tr>
+                <th>월</th>
+                <th>요금</th>
+            </tr>
+        </thead>
+        <!-- 테이블 본문 -->
+        <tbody>
+            <tr>
+                <td>1월</td>
+                <td>1000원</td>
+            </tr>
+            <tr>
+                <td>2월</td>
+                <td>2000원</td>
+            </tr>
+            <tr>
+                <td>3월</td>
+                <td>3000원</td>
+            </tr>
+        </tbody>
+        <!-- 테이블 꼬리말 -->
+        <tfoot>
+            <tr>
+                <th>합계</th>
+                <th>4500원</th>
+            </tr>
+        </tfoot>
+
+    </table>
+    <hr>
+
+    <!-- 셀 합치기 : 가로 colspan ,세로 rowspan -->
+    <table border="1" width="150">
+        <tr>
+            <th>가가</th>
+            <th>나나</th>
+            <th>다다</th>
+        </tr>
+        <tr>
+            <th colspan="2">라라</th>
+            <th>마마</th>
+        </tr>
+        <tr>
+            <th>AA</th>
+            <th rowspan="2">BB</th>
+            <th>CC</th>
+        </tr>
+        <tr>
+            <th>DD</th>
+            <th>EE</th>
+        </tr>
+    </table>
+
+    <hr>
+    <!-- 표 내부에서 표작성 -->
+    <table id="box" border="1" width="50%" height="200">
+        <tr>
+            <td>국어</td>
+            <td>
+                <table border="1">
+                    <tr>
+                        <td>수학</td>
+                        <td>과학</td>
+                    </tr>
+                    <tr>
+                        <td>미술</td>
+                        <td>음악</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- tabke end -->
+
+    <hr>
+
+    <table border="3" width="50%" height="200">
+        <tr>
+            <th></th>
+            <th colspan="3"></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th rowspan="3"></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th rowspan="2"></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th colspan="5"></th>
+        </tr>
+
+    </table>
+
+
+</body>
+
+</html>

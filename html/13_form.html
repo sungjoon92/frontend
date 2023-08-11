@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- https://dhlottery.co.kr/user.do?method=login&returnUrl= -->
+    <!-- 동행복권 로그인 -->
+
+    <h3 class="login">
+        로그인
+        <img src="../images/로그인.png" alt="로그인img">
+    </h3>
+
+    <!-- 사용자가 입력한 정보는 <form>단위로 서버로 전송됨 -->
+
+    <!-- action ok.() 언어로 사용자에게 보여줘라 -->
+    <!-- <form action="ok.jsp">
+    </form> -->
+
+
+    <form action="">
+        <table border="1">
+            <tr>
+                <th>아이디</th>
+                <td>
+                    <input type="text">
+                </td>
+                <td rowspan="2">
+                    <input type="submit" value="로그인">
+                </td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td>
+                    <input type="password">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <input type="checkbox" checked>
+                <td>
+                    아이디 저장
+                </td>
+                </th>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="button" value="회원가입"></input>
+                    <input type="button" value="아이디/비밀번호 찾기"></input>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+
+    <!-- 
+        주의사항
+
+        예) 잘못된경우
+        <form>
+            <form></form>
+        <form>
+
+        예) 잘된경우
+        >from></from>
+        >from></from>
+    -->
+
+</body>
+
+</html>

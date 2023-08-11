@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from.html</title>
+</head>
+
+<body>
+    <!-- https://www.w3schools.com/html/html_forms_attributes.asp -->
+
+    <h3>폼 관련 속성들</h3>
+    <!-- 
+        id : 폼 아이디(식별자) frontend단에 접근시 사용
+        name : 폼 이름 backend단에서 접근시 사용
+        action : 예) "ok.jsp" = 자바스크립트 문법 : 사용자가 입력 요청한 정보를 서버측에서 받는 페이지명, 명령어
+        action= "": 사용자가 입력 요청한 정보를 서버측에서 받는 페이지명, 명령어
+        method : 전송방식=> get (엽서 방식) , post(편지봉투 방식)
+        enctype : 
+    -->
+
+
+    <!-- method-get 사용자가 입력한 정보가 url에 그대로 노출(엽서) -->
+    <form id="loginfrm" name="loginfrm" method="get" action="ok.jsp">
+        아이디: <input type="text" name="userid" id="">
+        <hr>
+        비밀번호: <input type="password" name="userpw" id="">
+        <hr>
+        <input type="submit" value="전송">
+    </form>
+
+    <!-- method-get 사용자가 입력한 정보가 패키지화 해서 전송(편지봉투) -->
+    <form id="loginfrm" name="loginfrm" method="post" action="ok.jsp">
+        아이디: <input type="text" name="userid" id="">
+        <hr>
+        비밀번호: <input type="password" name="userpw" id="">
+        <hr>
+        <input type="submit" value="전송(post)">
+    </form>
+
+    <form action="" enctype="multipart/form-data">
+        첨부파일 <input type="file">
+    </form>
+    <hr>
+
+
+    <h3>2. type.image</h3>
+    <form action="ok.jsp">
+        <img src="../images/angel.png" title="천사" alt="">
+    </form>
+
+
+    <!-- img src="" > + type = submit 기능 -->
+    <input type="image" src="../images/angel.png">
+    <hr>
+
+
+    검색 : <input type="text" name="search" id="">
+    <input type="image" src="../images/angel.png">
+    <hr>
+
+    <h3>3. 다양한 input types</h3>
+    <!-- https://www.w3schools.com/html/html_form_input_types.asp -->
+
+
+    <!-- html페이지에서 노출되지는 않지만 form에 포함된 커트롤 요소 -->
+    <form method="get" action="ok.jsp">
+        <input type="hidden" id="page" name="page" value="3">
+        <input type="hidden" id="col" name="col" value="title">
+        <input type="submit" name="" id="">
+    </form>
+
+    <input type="number" id="quantity" name="quantity" min="1" max="5">
+    <input type="range" id="vol" name="vol" min="0" max="50">
+
+    <input type="color">
+    <input type="date">
+    <input type="search">
+    <input type="time">
+
+    <h3>4. label</h3>
+    <label for="user">이름 : </label>
+    <input type="text" name="" id="user">
+
+
+
+
+
+</body>
+
+</html>

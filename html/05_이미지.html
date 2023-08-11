@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_이미지.html</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <!-- 
+        1. dlalwl(.jpg .png .gif)
+        <img src="파일명"
+
+        1) 상대경로
+            현재 html문서가 저장되어 있는 폴더 기준
+            images/ 현재폴더 안에서 하위폴더
+            ./images  현재폴더 안에서 하위폴더
+            ../images 현재폴더의 상위폴더
+            ../../images 현재폴더의 상위의 상위폴더
+
+        2) 절대경로
+        웹 프로젝트의 root(홈 디렉토리)부터 시작
+        윗폴더부터 아래로 내려가면서 찾는밥식     
+     -->
+    <img src="images/k1.png" alt="">
+    <img src="./images/k2.png" alt="">
+    <img src="../images/k3.png" width="150px" height="150px" alt="">
+    <img src="../images/k4.png" width="50%" height="50%" alt="">
+
+    <!-- 크기에 대한 기준 가로(width) -->
+    <img src="../images/k5.png" width="150px" alt="">
+
+
+    <!-- 테두리선 -->
+    <img src="../images/k6.png" border="2px" alt="">
+    <hr>
+    <img src="../images/k7.png" border="0" alt="">
+    <hr>
+
+    <img src="../images/k7.png" alt="라이언1" title="라이언2">
+
+    
+</body>
+
+</html>
