@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_json함수</title>
+</head>
+
+<body>
+    <h3>json 함수</h3>
+
+    <script>
+
+
+        /*
+        // json array
+                let myobj = {
+                    name: "john",
+                    age: 30,
+                    cars: ["Fored", "BMW", "Fiat"]
+                }
+        
+                document.write(myobj.cars[0])
+                document.write("<hr>")
+                //////////////////////////////////////////////////////////////////
+        
+        
+                //for ~ in 반복문
+                //형식) for() key in object)()
+        
+                document.write("//////////////for in 반복문///////////<hr>");
+        
+                const numbers = [45, 4, 9, 16, 25];
+        
+                for (let i = 0; i < numbers.length; i++) {
+                    document.write(numbers[i]);
+                    document.write("<hr>");
+                }//for end
+        
+                for (let i in numbers) {
+                    // document.write(1);//numbers배열의 인덱스 반환
+                    document.write(numbers[i]);
+                    document.write("<hr>");
+                }//for end
+        
+        
+        
+                const person = { "firstName": "john", "lastName": "Doe", "age": 46 };
+                for (let i in person) {
+                    document.write(person[i]);
+                    document.write("<hr>");
+                }//for end
+        
+                document.write(person.firstName)
+                document.write(person.lastName)
+                document.write(person.age)
+        */
+        /////////////////////////////////////////////////////////////
+
+
+
+        // JSON 관련 함수
+
+        //1) JSON.parse()
+        // <string형태의 jSON문법을 분리할 때
+        const person = '{ "firstName": "john", "lastName": "Doe", "age": 46 }';
+        document.write(person.length);
+        document.write(person);
+        document.write("<hr>")
+
+        let obj = JSON.parse(person);
+        document.write(obj.firstName);
+        document.write(obj.lastName);
+        document.write(obj.age);
+        document.write("<hr>")
+
+
+        //2) JSON.stringify()
+        //JSON값을 일반 문자열로 변환
+
+        let txt = { "firstName": "john", "lastName": "Doe", "age": 20 };
+        let str = JSON.stringify(txt);
+        document.write(str.length);
+        document.write(str);
+
+        /////////////////////////////////////////////////////////
+
+        // json으로 구성된 파일을 작성하는 경우 .json으로 저장한다.
+
+        // 예)actors.json
+    </script>
+
+</body>
+
+</html>

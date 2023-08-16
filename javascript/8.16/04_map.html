@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_kakaomap</title>
+</head>
+
+<body>
+    <h3>04_kakaomap</h3>
+
+
+
+    <!-- 참조 http://pretyimo.cafe24.com/lectureRead.do?lectureno=407 -->
+
+    <!-- 1) Live Server
+           카카오 지도 서비스는 Visual Studio Code 확장팩 Live Server 설치후
+           File -> Open Folder...
+                -> 해당 파일 우클릭 Open with Live Server
+                   다음과 같이 확인 http://127.0.0.1:5500/03_kakao -->
+
+
+
+    <!-- 2) 구글맵에서 위도+경도 확인
+
+    구글맵 위도, 경도가 표시 되지 않을 경우
+    구글지도 좌표 지역 설정 다른나라로 설정하면 좌표 바로 뜹니다.
+    지역 설정은 지도 우하단에 작은 글씨 대한민국을 클릭하면 바꿀 수 있습니다. -->
+    <!-- 
+    3) 애플리케이션 추가 및 플랫폼 등록
+
+    ● appkey 받는 방법
+      https://developers.kakao.com/ 로그인
+      지도 -> 제품소개 -> 시작하기 -> 애플리케이션 추가하기 -> JavaScript 키 복사
+
+    ● 플랫폼 설정하기
+      내 애플리케이션 -> APP 선택 -> 플랫폼 -> 플랫폼 설정하기 -> Web 플랫폼 등록 -> 
+
+ -->
+
+    <div id="map" style="width:500px;height:400px;"></div>
+
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f30e12441fce8cdb1a9ae987f74d4327"></script>
+    <script>
+        var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+        var options = { //지도를 생성할 때 필요한 기본 옵션
+            center: new kakao.maps.LatLng(37.4988, 127.0319), //지도의 중심좌표.
+            level: 3 //지도의 레벨(확대, 축소 정도)
+        };
+
+        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+    </script>
+</body>
+
+</html>
