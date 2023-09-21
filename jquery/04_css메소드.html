@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_css메소드</title>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+</head>
+
+<style>
+    #box {
+        width: 400px;
+        height: 300px;
+        border: 1px solle #000;
+    }
+</style>
+
+<body>
+
+    <h3>css()함수</h3>
+
+    <p>
+        <button>색상입력</button>
+        <button>높이얻기</button>
+        <button>여러 개의 속성을 한번에 변경</button>
+        <img src="../images/k7.png" alt="">
+    </p>
+    <div id='box'></div>
+
+</body>
+
+<script>
+    $("button:eq(0)").click(function () {
+        $("#box").css("background", "red");
+    });
+
+    $("button:eq(1)").click(function () {
+        let width = $("#box").css("width");
+        let height = $("#box").css("height");
+        alert(width);
+        alert(height);
+
+    });
+
+    $("button:eq(2)").click(function () {
+        let width = 800;
+        $("#box").css({
+            "width": width
+            , height: 600
+            , "background": "url(../images/k7.png)"
+            , "border": "50px dotted blue"
+        });
+    });
+
+</script>
+
+</html>
