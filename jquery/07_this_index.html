@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_this_index</title>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+</head>
+
+<style>
+    #exBox {
+        width: 400px;
+        height: 400px;
+    }
+
+    .btn {
+        width: 120px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    #pinkBtn {
+        background: hotpink;
+    }
+
+    #blueBtn {
+        background: blue;
+    }
+
+    #greenBtn {
+        background: green;
+    }
+</style>
+
+<body>
+    <h3>클릭한 요소의 인덱스 얻기(index)</h3>
+    <button>버튼1</button>
+    <button>버튼2</button>
+    <button>버튼3</button>
+    <hr>
+
+    <h3>this 연습</h3>
+    <div id="exBox">
+        <p>
+            <button id="pinkBtn" class="btn">멋진 핑크</button>
+            <button id="blueBtn" class="btn">쿨한 파랑</button>
+            <button id="greenBtn" class="btn">네온 녹색</button>
+        </p>
+
+        <dl>
+            <dt>클릭한 버튼정보</dt>
+            <dd>클릭한 버튼의 index : <span id="index">?</span></dd>
+            <dd>클릭한 버튼의 뒷배경색 : <span id="color">?</span></dd>
+            <dd>클릭한 버튼의 글자 : <span id="text">?</span></dd>
+        </dl>
+    </div>
+</body>
+
+<script>
+
+    //$(this)       jQuery에서 this 객체 접근
+    //$("this")     본문에서 <this>요소에 접근
+    //$("<this>")   본문에 <this>요소 생성
+
+
+    $("button").click(function () {
+        //this 선택한 요소 자신을 가리킴
+
+        //1) javaScript
+        // this.style.background = color = "red";
+            $(this).css("color","blue");
+        
+        // //2) jquery
+        // $(this).mouseover(function () {
+        //     $(this).css({"background-color": "blue", "color": "pink"});});
+        // //사용자가 클릭한 요소의 인덱스 가져오기
+        // let idx = $(this).index(); //1부터 시작
+        // // alert(idx);
+
+    })//click end
+
+
+    $("exBox .btn").click(function () {
+        let idx = $(this).index(); //1부터 시작
+        // alert(idx);
+    })
+    
+    // $("body").children().click(function () {
+    //     let idx = $(this).index(); //인덱스확인
+    //     // alert(idx);
+    // })
+
+    // $("#exBox .btn").click(function () {
+    //     let idx = $(this).index();
+
+    //     let color = $(this).css("background-color");
+    //     let txt = $(this).text();
+
+    //     $("#index").text(idx);
+    //     $("#color").text(color);
+    //     $("#text").text(txt);
+    // })
+
+</script>
+
+</html>
