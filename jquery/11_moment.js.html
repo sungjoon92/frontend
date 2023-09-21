@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_,moment.js</title>
+    <script src="momentjs.com_downloads_moment-with-locales.min.js"></script>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+</head>
+<style>
+    #time {
+        margin: 0;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <h3>moment.js 오픈소스</h3>
+
+    <h1 id="time"></h1>
+</body>
+
+<script>
+    // 자바스크립트기반 오픈소스 인기 순위 https://stats.js.org/
+
+    // moment.js
+    // 자바스크립트의 내장객체 Date()의 복잡성을 단순, 다양하게 사용하기 위한 자바스크립트 기반 오픈소스
+    // https://momentjs.com/
+
+
+    // 1) 자바스크립트
+    // 문제) 본문에 id=time에 날짜 출력하기 
+
+
+   
+        // const now = new Date();
+
+        // let year = now.getFullYear();
+        // let month = now.getMonth()+1;
+        // let date = now.getDate();
+
+        // let hour = now.getHours();
+        // let min = now.getMinutes();
+        // let sec = now.getSeconds();
+
+        // let fulldate= "";
+
+        // fulldate += year+"년"+month+"월"+date+"일";
+        // fulldate += hour+"시"+min+"분"+sec+"초";
+
+        // document.getElementById("time").innerText = fulldate;
+        // // $("#time").text(fulldate);
+
+        
+        let now2 = moment(); //moment 라이브러리 시작
+        // alert(now.year());
+        // alert(now.month());
+        // alert(now.data());
+        // alert(now.day());
+
+
+        moment.locale("ko"); //한글 날짜 형식으로 지정
+        let fulldate2 = now2.format("YYYY년MM월DD일 HH시mm분ss초")
+        $("#time").text(fulldate2);
+        
+</script>
+
+</html>
