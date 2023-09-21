@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_속성관련메소드</title>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <h3>속성관련 메소드</h3>
+    <p>
+        <button>title얻기</button>
+        <button>src변경</button>
+        <button>여러개의 속성을 변경</button>
+    </p>
+    <img src="../images/k7.png" alt="라이언" title="ryan">
+    <!-- 
+        <imt> : 요소 , element
+        src, alt, title : 속성, property, attribute
+     -->
+</body>
+
+<script>
+    // css(), text(), html()
+    // prop(), attr() 요소의 속성 접근 함수
+    // ajax() 웹서바와 문자단위 통신할때(비동기적) 사용하는 함수
+
+    $("button:eq(0)").click(function () {
+        // <imt>요소의 title속성값 가져오기 (getter개념)
+        let title = $("img").attr("title");
+        alert(title);
+    });//click end
+
+    $("button:eq(1)").click(function () {
+        //setter개념
+        $("img").attr("src", "../images/k6.png")
+    });//click end
+
+    $("button:eq(2)").click(function () {
+        let obj = {
+            "width": 400
+            , "height": 300
+            , "src": "https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAxODAyMjdfMTQ0%2FMDAxNTE5NzA1NDA2NDAy.63L3yEiH9WPORrBcuwAAmo1JGJQqUYy1tQta1Qbi9usg.j3e7cXtbqdM2hdTl8JSZMFx7GsEL00JuAAN7zukj4C0g.PNG.silverborijy%2F%25B9%25AB%25C1%25F6%25BE%25D8%25C4%25DC.png&type=sc960_832"
+            , "alt": "콘"
+            , "title": "CON"
+        };
+
+        $("img").attr(obj);
+        
+    });//click end
+
+    //jQuery Method Chaining
+    //$().css().text().attr() 
+</script>
+
+</html>
