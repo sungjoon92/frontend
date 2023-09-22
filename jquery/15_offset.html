@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="momentjs.com_downloads_moment-with-locales.min.js"></script>
+</head>
+
+<style>
+    #box {
+        width: 600px;
+        height: 499px;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        margin: -200px 0 0 -300px;
+        background: skyblue;
+    }
+
+    #child {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        left: 200px;
+        top: 100px;
+        background: peru;
+        cursor: pointer;
+        box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
+<body>
+
+    <h3>offset과 position</h3>
+
+    <div id="box">
+        <div id="child"></div>
+    </div>
+
+
+
+
+</body>
+
+<script>
+
+
+    /* 
+        특정요소의 위치값을 얻는 방버
+        1)브라우저(크롬)기준            : offset()
+        2)포지셔닝 컨텍스드(<body>기준) : position()
+        리턴 자료형 : 객체 (left, top속성)
+     */
+
+    $("#child").click(function () {
+
+        let offset = $("#child").offset()
+        let position = $("#child").position()
+
+        let msg = "";
+
+        msg += "offset left : " + offset.left + "<br>";
+        msg += "offset top : " + offset.top + "<br>";
+
+        msg += "postition left : " + position.left + "<br>";
+        msg += "postition top : " + position.top + "<br>";
+
+        $("#child").html(msg);
+
+    });
+</script>
+
+</html>
