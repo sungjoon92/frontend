@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>06_배우목록.html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<style>
+    #loader {
+        width: 100%;
+        height: 100%;
+        background-color: #ede9df;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-image: url(loader.gif);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: none;
+    }
+</style>
+
+<body>
+
+    <h3>배우 목록 보여주기</h3>
+    <div id="loader"></div>
+    <button>서버에게 요청!!</button>
+    <hr>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>키</th>
+                <th>몸무게</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td colspan="3">없습니다</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+<script>
+    $("button").click(function () {
+        // alert();
+
+        //2) loader이미지 보여줌
+        $("#loader").show();
+
+        //3) 서버에 요청해서 응답메세지 받아오기 (댓글 더보기등)
+        $.ajax("actors.json", {
+            datatype: "json"
+            , error: function (error) {
+                // alert(error);
+
+            }//error end
+            , success: function (result) {
+                // alert(result);
+
+                //4) 기존의 <tbody> 값 삭제
+                $("tbody").empty();
+
+                //5) table의 tbody값 수정
+                $(result).each(function () {
+                    // alert(this.name)
+                    // alert(this.height)
+                    // alert(this.weight)
+                    let $tr = $("<tr>");
+                    let $td1 = $("<td>").text(this.name);
+                    let $td2 = $("<td>").text(this.height);
+                    let $td3 = $("<td>").text(this.weight);
+                    $tr.append($td1, $td2, $td3).appendTo("tbody");
+
+                })//each end
+                $("#loader").fadeOut(500);
+            }// success end
+
+        });//ajax end
+
+
+
+    });// click end
+
+</script>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>04_성적목록 보여주기.html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<style>
+    td {
+        width: 100px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <button>* JSON 데이터 받아오기 *</button>
+    <div id="panel"></div>
+
+    <script>
+        $("button").click(function () {
+            // alert()
+            // $.ajax(json 파일명,{datatype:"데이터 타입", 에러일때 보여줄 콜백함수, 성공시 보여줄 콜백함수})
+            $.ajax("sungjuks.json", {
+                dataType: "json"
+
+                , error: function (error) {
+                    // alert("ERROR!!" + error)
+
+                } //error end
+
+                , success: function (result) {
+                    // alert(result)
+                    let str = "<table border ='1'>";
+
+                    // each 함수는 첫번쨰 인덱스값, 두번째 요소값 반환
+                    $.each(result, function (idx, data) {
+                        // alert(idx)  //요소 순서
+                        // alert(data) //각 배열 요소값
+                        str += "<tr>";
+                        str += "   <td>" + data.name + "</td>";
+                        str += "   <td>" + data.id + "</td>";
+                        str += "   <td>" + data.kor + "</td>";
+                        str += "   <td>" + data.eng + "</td>";
+                        str += "   <td>" + data.mat + "</td>";
+                        str += "</tr>";
+                    })//each() end
+                    str += "<table>";
+                    $("#panel").append(str);
+                }//success end
+            });//ajax() end
+        });//click end
+
+    </script>
+
+</body>
+
+</html>
